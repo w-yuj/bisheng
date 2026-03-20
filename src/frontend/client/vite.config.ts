@@ -29,15 +29,15 @@ export default defineConfig(({ command }) => ({
       //   changeOrigin: true,
       // },
       '^(/workspace)?/bisheng': {
-        target: "http://192.168.106.120:3002",
+        target: "http://192.168.20.239:3001",
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => {
-          return path.replace(/^\/workspace/, '');
-        },
+        // rewrite: (path) => {
+        //   return path.replace(/^\/workspace/, '');
+        // },
       },
       '/workspace/api': {
-        target: 'http://192.168.106.120:3002',
+        target: 'http://192.168.20.239:3001',
         changeOrigin: true,
         secure: false,
         ws: true,
@@ -46,17 +46,17 @@ export default defineConfig(({ command }) => ({
             console.log('Proxying request to:', proxyReq.path);
           });
         },
-        rewrite: (path) => {
-          return path.replace(/^\/workspace/, '');
-        },
+        // rewrite: (path) => {
+        //   return path.replace(/^\/workspace/, '');
+        // },
       },
       '/workspace/tmp-dir': {
-        target: 'http://192.168.106.120:3002',
+        target: 'http://192.168.20.239:3001',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => {
-          return path.replace(/^\/workspace/, '');
-        },
+        // rewrite: (path) => {
+        //   return path.replace(/^\/workspace/, '');
+        // },
       },
     },
   },

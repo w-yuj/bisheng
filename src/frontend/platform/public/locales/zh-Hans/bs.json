@@ -1,5 +1,5 @@
 {
-  "title": "BISHENG",
+  "title": "大模型应用平台",
   "prompt": "提示",
   "unsupportedFileType": "不支持文件类型: {{extensions}}",
   "supportedFormatsWithImages": "支持的文件格式为 pdf（含扫描件）、txt、docx、ppt、pptx、md、html、xls、xlsx、csv、doc、png、jpg、jpeg、bmp；每个文件最大支持{{maxSize}}mb；pdf支持溯源定位。",
@@ -712,7 +712,7 @@
     "inputPlaceholder": "输入框提示语",
     "inputPlaceholderPlaceholder": "给xx发送消息",
     "appCenterWelcome": "应用中心欢迎语",
-    "appCenterWelcomePlaceholder": "探索BISHENG的智能体",
+    "appCenterWelcomePlaceholder": "探索申能的智能体",
     "appCenterDescription": "应用中心描述",
     "appCenterDescriptionPlaceholder": "您可以在这里选择需要的智能体来进行生产与工作~",
     "modelManagement": "对话模型管理",

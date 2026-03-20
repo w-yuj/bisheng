@@ -75,7 +75,7 @@ export default function MainLayout() {
                 <div className="flex h-9 my-[14px]">
                     <div className="inline-block" >
                         {/* @ts-ignore */}
-                        <img src={__APP_ENV__.BASE_URL + '/assets/bisheng/login-logo-small.png'} className="w-[104px] ml-[38px] rounded dark:w-[104px]" alt="" />
+                        <img src={__APP_ENV__.BASE_URL + '/assets/bisheng/login-logo-small.png'} className="w-auto h-8 ml-[38px] rounded dark:w-[auto]" alt="" />
                     </div>
                 </div>
                 <div>
