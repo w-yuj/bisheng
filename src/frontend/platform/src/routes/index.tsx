@@ -3,6 +3,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import { LoginPage } from "../pages/LoginPage/login";
 import { ResetPwdPage } from "../pages/LoginPage/resetPwd";
+import { AutoLoginPage } from "../pages/LoginPage/autoLogin";
 import Page403 from "../pages/Page403";
 import Page404 from "../pages/Page404";
 import { AppNumType } from "../types/app";
@@ -137,6 +138,7 @@ const privateRouter = [
   { path: "/report/:id/", element: <Report />, errorElement: <RouteErrorBoundary /> },
   { path: "/diff/:id/:vid/:cid", element: <DiffFlowPage />, errorElement: <RouteErrorBoundary /> },
   { path: "/reset", element: <ResetPwdPage />, errorElement: <RouteErrorBoundary /> },
+  { path: "/autologin", element: <AutoLoginPage />, errorElement: <RouteErrorBoundary /> },
   { path: "/403", element: <Page403 /> },
   { path: "/404", element: <Page404 /> },
   { path: "*", element: <Navigate to="/404" replace /> }
@@ -174,6 +176,7 @@ export const getAdminRouter = () => {
 export const publicRouter = createBrowserRouter([
   { path: "/", element: <LoginPage />, errorElement: <RouteErrorBoundary /> },
   { path: "/reset", element: <ResetPwdPage />, errorElement: <RouteErrorBoundary /> },
+  { path: "/autologin", element: <AutoLoginPage />, errorElement: <RouteErrorBoundary /> },
   { path: "/chat/:id/", element: <ChatShare />, errorElement: <RouteErrorBoundary /> },
   { path: "/chat/flow/:id/", element: <ChatShare type={AppNumType.FLOW} />, errorElement: <RouteErrorBoundary /> },
   { path: "/chat/assistant/:id/", element: <ChatAssitantShare />, errorElement: <RouteErrorBoundary /> },
