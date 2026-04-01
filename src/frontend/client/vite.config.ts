@@ -9,8 +9,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 const app_env = {
-  BASE_URL: '/workspace',
-  BISHENG_HOST: '/admin'
+  BASE_URL: '/bs/workspace',
+  BISHENG_HOST: '/bs/admin'
 }
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
@@ -28,15 +28,12 @@ export default defineConfig(({ command }) => ({
       //   // target: 'http://localhost:3080',
       //   changeOrigin: true,
       // },
-      '^(/workspace)?/bisheng': {
+      '^(/bs/workspace)?/bisheng': {
         target: "http://192.168.20.239:3001",
         changeOrigin: true,
         secure: false,
-        // rewrite: (path) => {
-        //   return path.replace(/^\/workspace/, '');
-        // },
       },
-      '/workspace/api': {
+      '/bs/workspace/api': {
         target: 'http://192.168.20.239:3001',
         changeOrigin: true,
         secure: false,
@@ -46,17 +43,11 @@ export default defineConfig(({ command }) => ({
             console.log('Proxying request to:', proxyReq.path);
           });
         },
-        // rewrite: (path) => {
-        //   return path.replace(/^\/workspace/, '');
-        // },
       },
-      '/workspace/tmp-dir': {
+      '/bs/workspace/tmp-dir': {
         target: 'http://192.168.20.239:3001',
         changeOrigin: true,
         secure: false,
-        // rewrite: (path) => {
-        //   return path.replace(/^\/workspace/, '');
-        // },
       },
     },
   },

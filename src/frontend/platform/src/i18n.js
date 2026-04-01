@@ -25,6 +25,7 @@ i18n.use(Backend)
         partialBundledLanguages: true,
         ns: ['bs', 'flow'],
         lng: userLanguage,
+        load: 'currentOnly',
         fallbackLng: 'en-US',
         backend: {
             loadPath: __APP_ENV__.BASE_URL + '/locales/{{lng}}/{{ns}}.json?v=' + json.version

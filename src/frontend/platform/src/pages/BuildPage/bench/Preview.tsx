@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 export default function Preview({ onBeforView }) {
         const { t } = useTranslation()
     const [open, setOpen] = useState(false)
-    const benchUrl = location.origin + '/workspace/'
+    const benchUrl = location.origin + `${__APP_ENV__.BASE_URL}/workspace/`
 
     const handleClick = async () => {
         const res = await onBeforView()

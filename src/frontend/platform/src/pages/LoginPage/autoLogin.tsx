@@ -31,9 +31,9 @@ export const AutoLoginPage = () => {
                         : localStorage.setItem("ws_token", res.access_token);
                     localStorage.setItem("isLogin", "1");
                     // @ts-ignore
-                    const path = import.meta.env.DEV ? "/admin" : "/workspace/";
+                    const path = import.meta.env.DEV ? "/admin" : `${__APP_ENV__.BASE_URL}/workspace/`;
                     // @ts-ignore
-                    location.href = `${location.origin}${__APP_ENV__.BASE_URL}${path}`;
+                    location.href = `${location.origin}${path}`;
                 }),
                 (error) => {
                     setErrorMsg(error || "登录失败，请检查用户名和密码");

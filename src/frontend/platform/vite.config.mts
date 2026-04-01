@@ -11,7 +11,7 @@ import svgr from "vite-plugin-svgr";
  * 开启后一般外层网管匹配【custom】时直接透传转到内层网关
  * 内层网关访问 api或者前端静态资源需要去掉【custom】前缀
 */
-const app_env = { BASE_URL: '' } // /custom
+const app_env = { BASE_URL: '/bs' }
 
 // Use environment variable to determine the target.
 //  const target = process.env.VITE_PROXY_TARGET || "http://127.0.0.1:7860";
@@ -63,8 +63,7 @@ export default defineConfig(() => {
   return {
     base: app_env.BASE_URL || '/',
     build: {
-      // minify: 'esbuild', // 使用 esbuild 进行 Tree Shaking 和压缩
-      outDir: "build",
+      outDir: "build/bs",
       rollupOptions: {
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
